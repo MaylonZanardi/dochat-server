@@ -83,6 +83,8 @@ def webservice():
         diretorio_atual = os.path.abspath(os.path.dirname(os.getcwd()))
         ingest_path = os.path.join(diretorio_atual, 'scripts')
         inputs_path = os.path.join(diretorio_atual, 'scripts', 'inputs')
+        if not os.path.exists(inputs_path):
+            os.makedirs(inputs_path)
         os.chmod(inputs_path, 0o777)
 
         # Limpa todos os arquivos do diretório inputs_path
