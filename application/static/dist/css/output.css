@@ -746,7 +746,7 @@ video {
 }
 
 .bg-indigo-500 {
-  width: 367px;
+  width: auto;
   --tw-bg-opacity: 1;
   background-color: #672b9c;
 }
