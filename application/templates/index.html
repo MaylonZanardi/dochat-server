@@ -38,18 +38,8 @@
   </head>
 
   <body>
-    <header class="bg-indigo-500 p-2 flex justify-between items-center">
-      <img
-        src="../static/src/logo_transparent_white.png"
-        alt="Logo DoChat"
-        class="logo-img"
-        style="width: 12rem"
-      />
-      <!-- <h1 class="text-lg font-medium text-white">DoChat</h1> -->
-    </header>
-    <!-- Alert Info  -->
     <div
-      class="border flex justify-between w-auto px-4 py-3 rounded relative hidden"
+      class=" flex justify-between w-auto px-4 py-3 rounded relative hidden"
       style="background-color: rgb(197, 51, 51); color: white"
       id="error-alert"
       role="alert"
@@ -62,37 +52,66 @@
         >&times;</strong
       >
     </div>
+    <header class="logo-container">
+      <img
+        src="../static/src/logo_transparent_white.png"
+        alt="Logo DoChat"
+        class="logo-img"
+        style="width: 16rem"
+      />
+      <!-- <h1 class="text-lg font-medium text-white">DoChat</h1> -->
+    </header>
+    <!-- Alert Info  -->
+    
 
     <div class="lg:flex ml-2 mr-2" style="margin-left: 0px; height: 100%">
       <div
         class="lg:w-1/4 p-2 sm:max-lg:hidden"
         style="
-          background-color: #a475e3;
+          background-color: #1B1C23;
           margin-right: 40px;
-          border-right: 40px solid #a475e3;
+          /* border-right: 40px solid #1B1C23; */
         "
       >
+      <div>
+        
+      </div>
         <label
-          class="block mb-2 text-sm font-medium text-gray-900"
-          style="margin-top: 20px; margin-bottom: 20px"
-          >Select documentation
+          class="text-title"          
+          >Welcome to Do Chat!
+        </label>        
+        <label
+          class="text-default"          
+          >Document consumption system based on natural language chat. Select the scope you want to work on and chat with me.         
         </label>
+        <hr>
+        <label
+        class="text-default-start"          
+        >Scope         
+        </label>     
         <select
           id="select-docs"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          class="select-scope"
         >
           <option selected value="default">Default</option>
         </select>
+        <hr>
+        <div>
+          <label
+          class="text-default"          
+          >Document consumption        
+        </label>
+        </div>
       </div>
       <hr class="my-4 border-gray-300" />
       <div class="lg:w-3/4 min-h-screen max-h-screen">
         <div class="w-full flex flex-col h-5/6">
           <div
             id="messages-container"
-            style="overflow: auto; width: 100%; margin-top: 30px"
+            style="overflow: auto; width: 100%; margin-top: 0px"
             class="sm:max-lg:mb-[12rem]"
           >
-            <div id="messages" class="w-full flex flex-col mt-2">
+            <div id="messages" class="w-full flex flex-col">
               <div
                 class="bg-indigo-500 text-white p-2 rounded-lg mb-2 self-start"
               >
@@ -105,7 +124,7 @@
 
           <div
             class="fixed bottom-0 w-full mt-4 mb-2 lg:w-3/4"
-            style="width: 70%"
+            style="width: 71%"
           >
             <form
               id="message-form"
